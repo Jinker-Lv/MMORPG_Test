@@ -134,14 +134,14 @@ message NetMessageResponse{
 	MapCharacterLeaveResponse mapCharacterLeave = 7;
 
 	MapEntitySyncResponse mapEntitySync = 8;
-	MapEntitySyncResponse mapEntitySync = 8;
 	
 }
 
 
 // User Protocol
-message FirstTestRequest {
+message FirstTestRequest{
 	string HelloWorld=1;
+}
 
 message UserLoginRequest {
 	string user = 1;

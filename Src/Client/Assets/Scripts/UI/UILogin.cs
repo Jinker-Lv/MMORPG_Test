@@ -1,4 +1,5 @@
 ﻿using Services;
+using SkillBridge.Message;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,11 +9,10 @@ public class UILogin : MonoBehaviour
 {
     public InputField username;
     public InputField password;
-    public Button buttonLogin;
     // Start is called before the first frame update
     void Start()
     {
-        
+        UserService.Instance.OnLogin = OnLogin;
     }
 
     // Update is called once per frame
@@ -33,6 +33,21 @@ public class UILogin : MonoBehaviour
             MessageBox.Show("请输入密码");
             return;
         }
-        //UserService.Instance.SendLogin(this.username.text, this.password.text);
+        UserService.Instance.SendLogin(this.username.text, this.password.text);
+    }
+    void OnLogin(Result result, string message)
+    {
+        if (result == Result.Success)
+        {
+            //登录成功，进入角色选择
+            MessageBox.Show("登录成功", "提示", MessageBoxType.Information).OnYes = this.CloseRegister;
+        }
+        else
+            MessageBox.Show(message, "错误", MessageBoxType.Error);
+    }
+
+    void CloseRegister()
+    {
+        this.gameObject.SetActive(false);
     }
 }

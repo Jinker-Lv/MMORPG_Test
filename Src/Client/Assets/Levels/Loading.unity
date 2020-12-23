@@ -2924,7 +2924,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1303031795}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1396882600}
+        m_MethodName: OnClickLogin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1303031795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3417,7 +3428,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   username: {fileID: 408497774}
   password: {fileID: 1303854544}
-  buttonLogin: {fileID: 1303031794}
 --- !u!1 &1415460505
 GameObject:
   m_ObjectHideFlags: 0
@@ -3747,7 +3757,6 @@ MonoBehaviour:
   username: {fileID: 1320240733}
   password: {fileID: 1496668858}
   passwordConfirm: {fileID: 841897214}
-  buttonRegister: {fileID: 1268430631}
   uiLogin: {fileID: 1396882596}
 --- !u!1 &1471999291
 GameObject:

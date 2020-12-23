@@ -11,7 +11,6 @@ public class UIRegister : MonoBehaviour {
     public InputField username;
     public InputField password;
     public InputField passwordConfirm;
-    public Button buttonRegister;
 
     public GameObject uiLogin;
     // Use this for initialization
